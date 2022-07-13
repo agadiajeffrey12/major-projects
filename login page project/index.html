@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="modal d-flex">
+    <div class="modal-box">
+
+    </div>
+    <button type="button" class="cancelbtn modalcan">Cancel</button>
+  </div>
+    <section>
+        <main>
+           <form action="action_page.php" method="post">
+            <div class="imgcontainer">
+                <ion-icon name="person-outline"></ion-icon>
+            </div>
+          
+            <div class="container d-flex column">
+              <div class="container-text">
+                <label for="uname"><b>Username</b></label>
+              </div>
+              <input type="text" placeholder="Enter Username" name="uname" required id="inputUser">
+          
+              <div class="container-text">
+                <label for="psw"><b>Password</b></label>
+              </div>
+              <input type="password" placeholder="Enter Password" name="psw" required id="inputId">
+          
+              <div class="button" id="login">Sign Up</div>
+              <label>
+                <input type="checkbox" checked="checked" name="remember"> Remember me
+              </label>
+            </div>
+            <div class="containers d-flex gap">
+              <button type="button" class="cancelbtn">Cancel</button>
+              <span class="psw">Forgot <a href="#">password?</a></span>
+            </div>
+          </form>
+        </main>
+    </section>
+    <script src="main.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

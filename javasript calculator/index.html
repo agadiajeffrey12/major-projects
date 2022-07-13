@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="d-flex">
+    <section class="d-flex">
+        <div class="calc-container gap-row ">
+            <p class="d-flex">calculator</p>
+            <div id="final" class="d-flex"></div>
+            <div class="d-flex input direction">
+                <div id="save"></div>
+                <div id="inputE">0</div>
+            </div>
+            <div class="calc-buts d-grid">
+                <div class="alpha-digits">
+                    <button class="buts" data-delete>ce</button>
+                    <button id="cancel" class="buts" data-number>cancel</button>
+                    <button class="buts" data-number>c</button>
+                    <button id="divide" class="buts" data-operation>/</button>
+                </div>
+                <div class="alpha-digits">
+                    <button class="buts" id="seven" data-number>7</button>
+                    <button id="eight" class="buts" data-number>8</button>
+                    <button id="nine" class="buts" data-number>9</button>
+                    <button id="multipy" class="buts" data-operation>x</button>
+                </div>
+                <div class="alpha-digits">
+                    <button class="buts" id="four" data-number>4</button>
+                    <button id="five" class="buts" data-number>5</button>
+                    <button id="six" class="buts" data-number>6</button>
+                    <button id="minus" class="buts" data-operation>-</button>
+                </div>
+                <div class="alpha-digits">
+                    <button class="buts" id="one" data-number>1</button>
+                    <button id="two" class="buts" data-number>2</button>
+                    <button id="three" class="buts" data-number>3</button>
+                    <button id="plus" class="buts" data-operation>+</button>
+                </div>
+                <div class="alpha-digits">
+                    <button class="buts">ce</button>
+                    <button id="zero" class="buts">0</button>
+                    <button id="dot" class="buts">.</button>
+                    <button id="equal" class="buts green" data-equal>=</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="main.js"></script>
+</body>
+</html>
