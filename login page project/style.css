@@ -29,6 +29,8 @@ body{
 }
 
 .modal-box{
+  color: #fff;
+  font: 2rem 'Helvetica';
   width: 50%;
   height: 60%;
   background-color: #555;
