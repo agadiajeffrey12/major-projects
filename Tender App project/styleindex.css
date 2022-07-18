@@ -1,0 +1,152 @@
+.main{
+    width: 100vw;
+    height: 100vh;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 2rem;
+    justify-content: space-between;
+    padding: 0 3rem;
+    position: relative;
+}
+
+.side-bar{
+    width: 7%;
+    height: 100%;
+    border-radius: 10px;
+    /* box-shadow: 20px 10px 90px #fff; */
+}
+
+.icons{
+    width: 100%;
+    height: 10%;
+    margin-bottom: 1rem;
+}
+
+.icons:first-child{
+    border-left: 4px solid blue;
+}
+
+.icons:active,
+.icons:hover{
+    border-left: 4px solid blue;
+    cursor: pointer
+}
+.icons ion-icon{
+    font-size: 3rem;
+    color:  #fff;
+}
+
+.theme{
+    position:absolute;
+    height: 100%;
+    width: 30%;
+    background-color: rgba(6, 6, 53, 0.918);
+    left: auto;
+    right: 0;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    visibility: hidden;
+    flex-direction: column;
+    color: #dbdb14;
+}
+
+.close-theme{
+    width: 4rem;
+    height: 4rem;
+    background-color: rgb(133, 8, 8);
+    border-radius: 10px;
+    color: #000;
+    margin-bottom: 4rem;
+}
+
+.close-theme ion-icon{
+    color: #000;
+}
+
+.theme ion-icon{
+    font-size: 3rem;
+    color: #fff;
+    margin-bottom: 3rem;
+}
+
+.theme ion-icon:hover{
+    cursor: pointer;
+}
+
+.settings{
+    position:absolute;
+    height: 100%;
+    width: 30%;
+    background-color: rgba(19, 19, 22, 0.918);
+    /* left: auto;
+    right: 0; */
+    transform: translateX(400%);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    /* visibility: hidden; */
+}
+
+.main-container{
+    width: 90%;
+    height: 100%;
+}
+
+.context{
+    width: 100%;
+    height: 100%;
+    justify-content: space-between;
+}
+
+.chatlist{
+    width: 35%;
+    height: 100%;
+}
+
+.chatroom{
+    width: 63%;
+    height: 100%; 
+    flex-direction: column;
+    row-gap: 4rem;
+    /* justify-content: space-between; */
+}
+
+.chathead{
+    height: 27%;
+    width: 100%;
+    margin-bottom: 1.5rem;
+    padding: 1rem 2rem;
+}
+
+.chatlist h1{
+    font: 4rem 'Pacifico';
+    color: rgb(252, 79, 160);
+    margin-bottom: 3rem;
+    width: 50%;
+}
+
+.headinput{
+    background-color: transparent;
+    border: 2px solid rgb(252, 79, 160);
+    outline: none;
+    padding-left: 1rem;
+    width: 65%;
+    height: 4rem;
+}
+
+.headinput::-webkit-input-placeholder{
+    font: 2rem 'Pacifico';
+    color: aliceblue;
+}
+
+.inputsearch{
+    width: 30%;
+    height: 4rem;
+    background-color: rgb(111, 79, 252);
+    outline: none;
+    border: none;
+}
+
+.chats{
+    height: 70%;
+    width: 100%;
+}
+

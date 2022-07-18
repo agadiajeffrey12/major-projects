@@ -1,0 +1,62 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font: 10px 'Trebuchet Ms';
+}
+
+body{
+    overflow-x: hidden;
+    padding: 1rem 0 1rem 0;
+    background-color: rgb(15, 15, 24);
+    width: 100vh;
+    height: auto;
+}
+
+.d-grid{
+    display: grid;
+}
+
+.d-flex{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.just-center{
+    justify-content: center;
+}
+
+.just-end{
+    justify-content: flex-end
+}
+
+.just-start{
+    justify-content: flex-start;
+}
+
+.just-space{
+    justify-content: space-between;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+.align-center{
+    align-items: center;
+}
+
+.background{
+    background-color:rgba(57, 44, 75, 0.562);
+}
+
+.font-white{
+    color: #fff;
+}
+
+.border-radius{
+    border-radius: 10px;
+}

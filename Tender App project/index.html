@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styleindex.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;1,400&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;1,100;1,200&family=Pacifico&family=Rubik:ital,wght@0,300;0,500;1,300;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;1,400&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;1,100;1,200&family=Pacifico&family=Rubik:ital,wght@0,300;0,500;1,300;1,400&display=swap" rel="stylesheet">
+</head>
+<body class="bdb">
+    <section class="main d-flex">
+        <div class="side-bar background">
+            <a href="#" class="icons d-flex just-center align-center">
+                <ion-icon name="person-outline"></ion-icon>
+            </a>
+            <div class="icons d-flex just-center align-center font-white" onclick="cog()">
+                <ion-icon name="cog-outline"></ion-icon>
+            </div>
+            <div class="icons d-flex just-center align-center" onclick="theme()">
+                <ion-icon name="toggle-outline"></ion-icon>
+            </div>
+            <a href="#" class="icons d-flex just-center align-center">
+                <ion-icon name="shield-half-outline"></ion-icon>
+            </a>
+        </div>
+        <!-- this is the theme session -->
+        <div class="theme d-flex just-center align-center">
+            <span class="close-theme d-flex just-center align-center"><ion-icon name="close-outline" onclick="close()">d</ion-icon></span>
+            <ion-icon name="moon-outline" onclick="dark()"></ion-icon>
+            <ion-icon name="sunny-outline" onclick="bright()"></ion-icon>
+            <ion-icon name="partly-sunny-outline" onclick="partial()"></ion-icon>
+        </div>
+        <div class="settings">
+            
+        </div>
+        <!-- end of theme session -->
+        <div class="main-container">
+            <div class="context d-flex">
+                <div class="chatlist d-flex">
+                    <header class="chathead background border-radius">
+                            <h1 class="cd">Tender</h1>
+                        <div class="d-flex just-space">
+                            <input type="text" placeholder="search" class="headinput border-radius font-white">
+                            <button class="inputsearch font-white border-radius">search</button>
+                        </div>
+                    </header>
+                    <div class="chats background">
+                        
+                    </div>
+                </div>
+                <div class="chatroom background"></div>
+            </div>
+        </div>
+    </section>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
