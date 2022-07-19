@@ -24,19 +24,71 @@
             <div class="icons d-flex just-center align-center" onclick="theme()">
                 <ion-icon name="toggle-outline"></ion-icon>
             </div>
-            <a href="#" class="icons d-flex just-center align-center">
+            <div class="icons d-flex just-center align-center change" onclick="shield()">
                 <ion-icon name="shield-half-outline"></ion-icon>
-            </a>
+            </div>
         </div>
         <!-- this is the theme session -->
         <div class="theme d-flex just-center align-center">
-            <span class="close-theme d-flex just-center align-center"><ion-icon name="close-outline" onclick="close()">d</ion-icon></span>
+            <span class="close d-flex just-center align-center"><ion-icon name="close-outline"></ion-icon></span>
             <ion-icon name="moon-outline" onclick="dark()"></ion-icon>
             <ion-icon name="sunny-outline" onclick="bright()"></ion-icon>
             <ion-icon name="partly-sunny-outline" onclick="partial()"></ion-icon>
         </div>
+        <!-- this is the parts from the settings -->
         <div class="settings">
-            
+            <ion-icon name="arrow-back-outline" class="close-settings font-white" onclick="arrow()"></ion-icon>
+            <div class="account d-flex">
+                <ion-icon name="key-outline"></ion-icon>
+                <div class="account-privacy font-white" onclick="openAccountLog()">
+                    <h3>Account</h3>
+                    <p>privacy and security</p>
+                </div>
+            </div>
+            <div class="font-style d-flex">
+                <ion-icon name="pencil-outline"></ion-icon>
+                <div class="font-private font-white" onclick="openFontLog()">
+                    <h3>Font</h3>
+                    <p>Fonts and font styles</p>
+                </div>
+            </div>
+            <div class="chat-style d-flex">
+                <ion-icon name="chatbox-ellipses-outline"></ion-icon>
+                <div class="chat-private font-white" onclick="openChatLog()">
+                    <h3>Chat</h3>
+                    <p>Chat themes and background</p>
+                </div>
+            </div>
+        </div>
+        <!-- All pop up of settings -->
+        <div class="account-popup border-radius">
+            <div class="close-chat-box d-flex just-end">
+                <div class="b" onclick="normalAccount()"></div>
+                <div class="b" onclick="enlargeAccount()"></div>
+                <div class="b" onclick="closeAccount()"></div>
+            </div>
+        </div>
+        <div class="font-popup border-radius">
+            <div class="close-chat-box d-flex just-end">
+                <div class="b" onclick="closeFont()"></div>
+            </div>
+        </div>
+        <div class="chat-popup border-radius">
+            <div class="close-chat-box d-flex just-end">
+                <div class="b" onclick="normalChat()"></div>
+                <div class="b" onclick="enlargeChat()"></div>
+                <div class="b" onclick="closeChat()"></div>
+            </div>
+        </div>
+        <!-- End of settings session -->
+        <div class="fire-shield background d-flex just-center align-center">
+            <div class="shield-response border-radius">
+                <div class="close-sheild-response d-flex just-end">
+                    <div class="b" onclick="normalResponse()"></div>
+                    <div class="b" onclick="enlargeResponse()"></div>
+                    <div class="b" onclick="closeResponse()"></div>
+                </div>
+            </div>
         </div>
         <!-- end of theme session -->
         <div class="main-container">
@@ -49,11 +101,22 @@
                             <button class="inputsearch font-white border-radius">search</button>
                         </div>
                     </header>
-                    <div class="chats background">
-                        
+                    <!-- input field for chat -->
+                    <div class="chat-settings border-radius d-flex just-center align-center">
+                        <ion-icon name="close-outline" onclick="closeChatSetting()"></ion-icon>
+                        <h3>Add a new contact</h3>
+                        <input type="text" placeholder="Enter Name" class="adding-chats">
+                        <input type="number" placeholder="Enter Number" class="adding-chats-num">
+                        <button onclick="displayChatValue()">Save</button>
+                    </div>
+                    <!-- input field for chats below -->
+                    <div class="chats background border-radius">
+                        <span class="chat-add d-flex just-end">
+                            <ion-icon name="add-outline" onclick="showChatSetting()"></ion-icon>
+                        </span>
                     </div>
                 </div>
-                <div class="chatroom background"></div>
+                <div class="chatroom background border-radius"></div>
             </div>
         </div>
     </section>

@@ -14,6 +14,7 @@ body{
     background-color: rgb(15, 15, 24);
     width: 100vh;
     height: auto;
+    position: relative;
 }
 
 .d-grid{
@@ -50,7 +51,7 @@ button:hover{
 }
 
 .background{
-    background-color:rgba(57, 44, 75, 0.562);
+    background-color:#392c4b8f;
 }
 
 .font-white{
