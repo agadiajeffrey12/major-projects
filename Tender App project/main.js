@@ -4,10 +4,46 @@ const colon = document.querySelector('.theme');
 const bdb = document.querySelector('.bdb')
 const main = document.querySelector('.main');
 const test = document.querySelector('.close');
-console.log(setting, bdb, close);
+
+const displayValue = function(e){
+    e.style.visibility = 'visible'
+    e.style.transition = 'all 0.3s ease-in-out';
+}
+
+const closeValue = function(e,b){
+    e.style.transform = 'translateX(400%)';
+    b.style.visibility ='hidden'; 
+}
+
+const bringOut = function(e){
+    e.style.transform = 'translateX(200%)';
+}
+
+const justClose = function(e){
+    e.style.visibility ='hidden';
+}
+
+const justShow = function(e){
+    e.style.visibility = 'visible'
+}
+
+const enlargeContent = function(e){
+    e.style.height = '100vh'
+    e.style.width = '100vw';
+    e.style.top = '0'
+    e.style.left = '0'
+    e.style.transition = 'all 0.3s ease-in-out';
+}
+
+const normalContent = function(e){
+    e.style.height = '70%';
+    e.style.width = '100%';
+    e.style.top = '15%'
+    e.style.left = '60%'
+}
 
 test.addEventListener('click', function(){
-    colon.style.visibility ='hidden';
+    closeValue(colon)
 })
 
 function cog() {
@@ -26,10 +62,6 @@ function theme(){
     }
 }
 
-// bdb.addEventListener('click', function(){
-//     colon.style.visibility ='hidden'; 
-// })
-
 function partial(){
     bdb.style.backgroundColor = 'rgba(57, 44, 75, 0.562)';
     bdb.style.transition = 'all 1s ease-in-out'
@@ -46,17 +78,19 @@ function bright(){
 }
 
 function arrow(){
-    setting.style.transform = 'translateX(400%)'
+    closeValue(setting)
 }
 
 const fireShield = document.querySelector('.fire-shield');
 const shieldFire = document.querySelector('.shield-response');
 
+fireShield.addEventListener('click', function(){
+    justClose(fireShield)
+})
+
 function shield() {
-    fireShield.style.visibility = 'visible';
-    fireShield.style.transition = 'all 0.3s ease-in-out';
-    setting.style.transform = 'translateX(400%)';
-    colon.style.visibility ='hidden'; 
+    displayValue(fireShield)
+    closeValue(setting, colon) 
 }
 
 function closeResponse() {
@@ -81,94 +115,193 @@ function normalResponse() {
 const chatSetting = document.querySelector('.chat-settings')
 
 function showChatSetting(){
-    chatSetting.style.visibility = 'visible'
-    chatSetting.style.transition = 'all 0.3s ease-in-out'
+    displayValue(chatSetting)
 }
 
 function closeChatSetting(){
-    chatSetting.style.visibility = 'hidden'
-    chatSetting.style.transition = 'all 0.3s ease-in-out'
+    justClose(chatSetting)
 }
 
+const chatLogDetails = []
 
-
-const addingChatNumber = document.querySelector('.adding-chats-num').value;
+function searched(){
+    const inputSearch = document.querySelector('.headinput').value;
+    const chatName = document.querySelector('#chatRoomName');
+    for(let i = 0; i < chatLogDetails.length; i++){
+        if(inputSearch === chatLogDetails[i]){
+            chatRoom.style.visibility ='visible';
+            chatName.textContent = inputSearch
+        }else{
+            console.log('not included');
+        }
+    }
+}
 
 function displayChatValue(){
+    chatSetting.style.visibility = 'hidden'
+    const addingChatNumber = document.querySelector('.adding-chats-num').value;
     const addingChat = document.querySelector('.adding-chats').value;
     const doc = document.createElement('div'); 
-    doc.innerHTML = addingChat;
+    doc.innerHTML = `<span onclick = "showSometing()">${addingChat}</span>`;
     const container = document.querySelector('.chats');
     container.appendChild(doc);
     doc.classList.add('chat-dispay');
+    chatLogDetails.push(addingChat);
+    console.log(chatLogDetails);
+    localStorage.setItem(doc.textContent, doc.textContent);
+    // location.reload()
+    console.log(localStorage);
+    if (doc.innerHTML === addingChat) {
+        doc.innerHTML += addingChatNumber
+    }
+    for(let i = 0; i < localStorage.lenght; i++){
+        const key = localStorage.key[i];
+        const value = localStorage.getItem(key)
+        doc.innerHTML = `<span onclick = "showSometing()">${value}</span>`
+    }
 }
 
 const chatPopUp = document.querySelector('.chat-popup');
 console.log(chatPopUp);
 
 function openChatLog() {
-    chatPopUp.style.visibility = 'visible';
-    setting.style.transform ='translateX(400%)';
+    justShow(chatPopUp)
+    closeValue(setting)
 }
 
 function closeChat() {
-    chatPopUp.style.visibility = 'hidden'
+    justClose(chatPopUp)
+    bringOut(setting)
 }
 
 function enlargeChat() {
-    chatPopUp.style.height = '100vh'
-    chatPopUp.style.width = '100vw';
-    chatPopUp.style.top = '0'
-    chatPopUp.style.left = '0'
-    chatPopUp.style.transition = 'all 0.3s ease-in-out';
+    enlargeContent(chatPopUp)
     main.style.padding = '0'
 }
 
 function normalChat() {
     if(chatPopUp.style.top = '0'){
-        chatPopUp.style.height = '70%';
-        chatPopUp.style.width = '100%';
-        chatPopUp.style.top = '15%'
-        chatPopUp.style.left = '60%'
+        normalContent(chatPopUp)
     }
 }
 
 const fontPopUp = document.querySelector('.font-popup');
 
 function openFontLog() {
-    fontPopUp.style.visibility = 'visible';
-    setting.style.transform ='translateX(400%)';
+    justShow(fontPopUp);
+    closeValue(setting)
 }
 
 function closeFont() {
-    fontPopUp.style.visibility = 'hidden'
+    justClose(fontPopUp)
+    bringOut(setting)
 }
 
 const accountPopUp = document.querySelector('.account-popup');
 
 function openAccountLog() {
-    accountPopUp.style.visibility = 'visible';
-    setting.style.transform ='translateX(400%)';
+    justShow(accountPopUp);
+    closeValue(setting)
 }
 
 function closeAccount() {
-    accountPopUp.style.visibility = 'hidden'
+    justClose(accountPopUp)
+    bringOut(setting)
 }
 
 function enlargeAccount() {
-    accountPopUp.style.height = '100vh'
-    accountPopUp.style.width = '100vw';
-    accountPopUp.style.top = '0'
-    accountPopUp.style.left = '0'
-    accountPopUp.style.transition = 'all 0.3s ease-in-out';
+    enlargeContent(accountPopUp)
     main.style.padding = '0'
 }
 
 function normalAccount() {
     if(accountPopUp.style.top = '0'){
-        accountPopUp.style.height = '70%';
-        accountPopUp.style.width = '100%';
-        accountPopUp.style.top = '15%'
-        accountPopUp.style.left = '60%'
+       normalContent(accountPopUp)
     }
+}
+
+const fontDecide = document.querySelector('#fontDecide');
+if(fontDecide.value == "first") {
+    console.log('aboki');
+}else if(fontDecide.value == "Helvetica"){
+    console.log(fontDecide);
+};
+// if(fontDecide.vaul)
+
+const carousel = document.querySelector('.status-carousel');
+const statusUpdates = document.querySelector('.status-updates')
+console.log(carousel, statusUpdates);
+let isPressedDown = false;
+let cursorSpaceX;
+
+carousel.addEventListener('mousedown', (e) => {
+    // isPressedDown = true;
+    // cursorSpaceX = e.offsetX - statusUpdates.offsetLeft;
+    // console.log(e.offsetX, statusUpdates.offsetLeft);
+    
+
+})
+
+// window.addEventListener('mouseup', function(){
+//     isPressedDown = false
+// })
+
+// function moveOperation(){
+//     statusUpdates.style.marginLeft = '-3%'
+// }
+
+// carousel.addEventListener('mousemove', (e) => {
+//     // if(!isPressedDown) return;
+//     //     e.preventDefault();
+//         moveOperation()
+// })
+
+const statusUpDateDiv = document.querySelector('.statusUpdateDiv')
+
+function openStatus(){
+    justShow(statusUpDateDiv)
+}
+
+function closeStatus(){
+    justClose(statusUpDateDiv)
+}
+const statusText = document.querySelector('.statusText')
+console.log(statusText);
+
+const btnStatus = document.querySelector('.btnStatus')
+
+btnStatus.addEventListener('click', () => {
+    
+})
+
+const chatRoom = document.querySelector('.chatRoom');
+const upArrow = document.querySelector('.upArrow')
+const downArrow = document.querySelector('.downArrow')
+function takeChatRoomUp(){
+    chatRoom.style.height = '100%'
+    chatRoom.style.top = '0';
+    chatRoom.style.transition = 'all 0.3s ease-in-out'
+    if(chatRoom.style.height === '100%'){
+        upArrow.style.visibility = 'hidden'
+        downArrow.style.visibility = 'visible'
+    }
+}
+
+function takeChatRoomDown(){
+    chatRoom.style.height = '50%'
+    chatRoom.style.top = '50%';
+    chatRoom.style.transition = 'all 0.3s ease-in-out'
+    if(chatRoom.style.height === '50%'){
+        upArrow.style.visibility = 'visible'
+        downArrow.style.visibility = 'hidden'
+    }
+}
+
+function showSometing(){
+    justShow(chatRoom)
+}
+
+function closeChatRoom(){
+    justClose(chatRoom);
+    justClose(upArrow)
 }

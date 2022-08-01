@@ -1,417 +1,100 @@
-// const dataOperation = document.querySelectorAll('[data-number]');
-// console.log(dataOperation);
+const btn = document.querySelectorAll('.maro');
+const operators = document.querySelectorAll('.opp');
 const inputE = document.getElementById('inputE');
+const eight = document.getElementById('eight');
 const save = document.getElementById('save');
-const final = document.getElementById('final');
-let plus = document.getElementById('plus');
-const minus = document.getElementById('minus');
-const divide = document.getElementById('divide');
-const multiply = document.getElementById('multipy');
-const one = document.getElementById('one');
-const two = document.getElementById('two');
-const three = document.getElementById('three');
-const four = document.getElementById('four');
-const five = document.getElementById('five');
-const six = document.getElementById('six');
-const seven = document.getElementById('seven');
-const eight = document.getElementById('eight')
-const nine = document.getElementById('nine');
-const equal = document.getElementById('equal');
-const dot = document.getElementById('dot');
-const zero = document.getElementById('zero');
-let currentValue = inputE.innerText
-let finalValue = 0
-let previousText = 0;
-let minusNow = false
-let plusNow = false;
-let multiplyNow = false;
-let divideNow = false
+const final = document.getElementById('final')
+const equal = document.getElementById('equal')
+const cancel = document.getElementById('cancel')
+const finalEqual = document.querySelector('.subandDiv')
+console.log(equal);
 
-// console.log(plus, minus, divide, multiply, one, two, three, four, five, six, seven, eight, nine);
-
-function inputCall() {
- inputE.innerText = 0
- if (inputE.innerText == inputE.innerHTML) {
-     nine.addEventListener('click', function() {
-        inputE.innerText  += nine.innerText;
-        currentValue = inputE.innerText;
-    })
- } 
-//  begining of button 8
- if (inputE.innerText = nine.innerText) {
-    eight.addEventListener('click', function() {
-        inputE.innerText  += eight.innerText;
-        currentValue = inputE.innerText
-        // console.log(currentValue);
-        // beginning of logical operation
-        if (currentValue == inputE.innerText) {
-            plus.addEventListener('click', function(){
-                let previousText = currentValue;
-                save.innerText = previousText;
-                inputE.innerText = 0;
-                plusNow = true; 
-                minusNow = false;
-                multiplyNow = false;
-                divideNow = false   
-                // count = 0;
-            })
-            minus.addEventListener('click', function(){
-                let previousText = currentValue;
-                save.innerText = previousText;
-                inputE.innerText = 0;  
-                minusNow = true  
-                plusNow = false;
-                multiplyNow = false;
-                // count = 0;
-            })
-            multiply.addEventListener('click', function(){
-                let previousText = currentValue;
-                save.innerText = previousText;
-                inputE.innerText = 0;  
-                minusNow = false  
-                plusNow = false
-                multiplyNow = true
-                // count = 0;
-            })
-            divide.addEventListener('click', function(){
-                let previousText = currentValue;
-                save.innerText = previousText;
-                inputE.innerText = 0;  
-                minusNow = false  
-                plusNow = false
-                multiplyNow = false;
-                divideNow = true
-                // count = 0;
-            })
-            if (currentValue == inputE.innerText) {
-                final.innerText = currentValue
-            } 
-            if (save.innerText == previousText || final.innerText == currentValue) {
-                equal.addEventListener('click', function (){
-                    const result = parseInt(save.innerText) + parseInt(final.innerText);
-                    console.log(result);
-                    inputE.innerText = result
-                })
-            }
-            if (minusNow = true && plusNow == false && multiplyNow == false ) {
-                equal.addEventListener('click', function (){
-                    const result = parseInt(save.innerText) - parseInt(final.innerText) ;
-                    inputE.innerText = result
-                })
-            }
-            // multiplication part
-            if (multiplyNow = true && minusNow == false && plusNow == false) {
-                equal.addEventListener('click', function (){
-                    const result = parseInt(save.innerText) * parseInt(final.innerText) ;
-                    inputE.innerText = result
-                })
-            }
-
-            if (divideNow = true && minusNow == false && plusNow == false && multiplyNow == false){
-                equal.addEventListener('click', function (){
-                    const result = parseInt(save.innerText) / parseInt(final.innerText) ;
-                    inputE.innerText = result
-                })
-            }
-            // division part
-            // if (divideNow = true && plusNow == false) {
-            //     equal.addEventListener('click', function (){
-            //         const result = parseInt(save.innerText) / parseInt(final.innerText) ;
-            //         inputE.innerText = result
-            //     })
-            // }
-        }
-    })
- } 
-//  End of button 8
- if (inputE.innerText = eight.innerText){
-    seven.addEventListener('click', function() {
-        inputE.innerText  += seven.innerText
-        currentValue = inputE.innerText
-        // console.log(inputE.innerText);
-        if (currentValue == inputE.innerText) {
-            plus.addEventListener('click', function(){
-                let previousText = currentValue;
-                save.innerText = previousText;
-                inputE.innerText = 0;    
-                // count = 0;
-            })
-            minus.addEventListener('click', function(){
-                let previousText = currentValue;
-                save.innerText = previousText;
-                inputE.innerText = 0;  
-                minusNow = true  
-                plusNow = false;
-                multiplyNow = false;
-                // count = 0;
-            })
-            multiply.addEventListener('click', function(){
-                let previousText = currentValue;
-                save.innerText = previousText;
-                inputE.innerText = 0;  
-                minusNow = false  
-                plusNow = false
-                multiplyNow = true
-                // count = 0;
-            })
-            divide.addEventListener('click', function(){
-                let previousText = currentValue;
-                save.innerText = previousText;
-                inputE.innerText = 0;  
-                minusNow = false  
-                plusNow = false
-                multiplyNow = false;
-                divideNow = true
-                // count = 0;
-            })
-            if (currentValue == inputE.innerText) {
-                final.innerText = currentValue
-            }
-            if (save.innerText == previousText || final.innerText == currentValue) {
-                equal.addEventListener('click', function (){
-                    const result = parseInt(save.innerText) + parseInt(final.innerText);
-                    console.log(result);
-                    inputE.innerText = result
-                })
-            }
-            if (minusNow = true && plusNow == false && multiplyNow == false ) {
-                equal.addEventListener('click', function (){
-                    const result = parseInt(save.innerText) - parseInt(final.innerText) ;
-                    inputE.innerText = result
-                })
-            }
-            // multiplication part
-            if (multiplyNow = true && minusNow == false && plusNow == false) {
-                equal.addEventListener('click', function (){
-                    const result = parseInt(save.innerText) * parseInt(final.innerText) ;
-                    inputE.innerText = result
-                })
-            }
-
-            if (divideNow = true && minusNow == false && plusNow == false && multiplyNow == false){
-                equal.addEventListener('click', function (){
-                    const result = parseInt(save.innerText) / parseInt(final.innerText) ;
-                    inputE.innerText = result
-                })
-            }
-            
-        }
-    })
- }
-
- console.log(currentValue);
- 
+function subtract(e,b){
+    return e - b
 }
 
+const actions = {
+    operator: ''
+}
 
-inputCall()
+const numberGotten = {
+    numberfirst: '',
+    numberSecond: ''
+}
 
-six.addEventListener('click', function() {
-    inputE.innerText  += six.innerText;
-    currentValue = inputE.innerText
-    console.log(currentValue);
-
-    if (currentValue == inputE.innerText) {
-        plus.addEventListener('click', function(){
-            let previousText = currentValue;
-            save.innerText = previousText;
-            inputE.innerText = 0;    
-            // count = 0;
-        })
-        minus.addEventListener('click', function(){
-                let previousText = currentValue;
-                save.innerText = previousText;
-                inputE.innerText = 0;  
-                minusNow = true  
-                plusNow = false;
-                multiplyNow = false;
-                // count = 0;
-            })
-            multiply.addEventListener('click', function(){
-                let previousText = currentValue;
-                save.innerText = previousText;
-                inputE.innerText = 0;  
-                minusNow = false  
-                plusNow = false
-                multiplyNow = true
-                // count = 0;
-            })
-            divide.addEventListener('click', function(){
-                let previousText = currentValue;
-                save.innerText = previousText;
-                inputE.innerText = 0;  
-                minusNow = false  
-                plusNow = false
-                multiplyNow = false;
-                divideNow = true
-                // count = 0;
-            })
-        if (currentValue == inputE.innerText) {
-            final.innerText = currentValue
-        }
-        if (save.innerText == previousText || final.innerText == currentValue) {
-            equal.addEventListener('click', function (){
-                const result = parseInt(save.innerText) + parseInt(final.innerText);
-                console.log(result);
-                inputE.innerText = result
-            })
+for(let i = 0; i < operators.length; i++)
+    operators[i].addEventListener('click', function(){
+        actions.operator = operators[i].textContent;
+        numberGotten.numberfirst = Number(inputE.textContent);
+        inputE.textContent = null;
+        console.log(numberGotten);
+        
+    })
+    equal.addEventListener('click', function(){
+        console.log(actions);
+        
+        console.log(numberGotten);
+        
+        switch (actions.operator) {
+            case '+':
+                numberGotten.numberSecond = Number(inputE.textContent);
+                let valueAdd= numberGotten.numberfirst;
+                valueAdd += numberGotten.numberSecond;
+                inputE.textContent = valueAdd
+            break;
+            case '-':
+                numberGotten.numberSecond = Number(inputE.textContent);
+                let valueSub = subtract(numberGotten.numberfirst, numberGotten.numberSecond)
+                inputE.style.visibility = 'hidden';
+                finalEqual.textContent = valueSub;
+                if (finalEqual.textContent = valueSub) {
+                    // console.log(valueSub - inputE.textContent);
+                    equal.addEventListener('click', function(){
+                       let realTotal = Number(finalEqual.textContent) - inputE.textContent 
+                    //    console.log(realTotal);
+                       if (realTotal = Number(finalEqual.textContent) - inputE.textContent ) {
+                        equal.addEventListener('click', function(){
+                            realTotal = inputE.textContent;
+                            finalEqual.textContent -= realTotal
+                            console.log(realTotal);
+                        })
+                       }
+                    })
+                }else{
+                    console.log('no');
+                }
+                finalEqual.style.visibility = 'visible'
+                // let finalSub = Number(inputE.textContent) - numberGotten.numberfirst;
+                // inputE.textContent = finalSub
+            break;
+            case 'x':
+                numberGotten.numberSecond = Number(inputE.textContent);
+                let valueMult= numberGotten.numberfirst;
+                valueMult *= numberGotten.numberSecond;
+                inputE.textContent = valueMult
+            break;
+            case '/':
+                numberGotten.numberSecond = Number(inputE.textContent);
+                let valueDiv= numberGotten.numberfirst;
+                valueDiv /= numberGotten.numberSecond;
+                inputE.textContent = valueDiv;
+            break;
+        
+            default:
+                break;
         }
         
-        
-    }
-})
+    })
+    
 
-five.addEventListener('click', function() {
-    inputE.innerText  += five.innerText;
-    currentValue = inputE.innerText
-     console.log(currentValue);
-
-     if (currentValue == inputE.innerText) {
-        plus.addEventListener('click', function(){
-            let previousText = currentValue;
-            save.innerText = previousText;
-            inputE.innerText = 0;    
-            // count = 0;
-        })
-        if (currentValue == inputE.innerText) {
-            final.innerText = currentValue
-        }
-        if (save.innerText == previousText || final.innerText == currentValue) {
-            equal.addEventListener('click', function (){
-                const result = parseInt(save.innerText) + parseInt(final.innerText);
-                console.log(result);
-                inputE.innerText = result
-            })
-        }
-    }
-})
-
-four.addEventListener('click', function() {
-    inputE.innerText  += four.innerText;
-    currentValue = inputE.innerText
-    console.log(currentValue);
-
-    if (currentValue == inputE.innerText) {
-        plus.addEventListener('click', function(){
-            let previousText = currentValue;
-            save.innerText = previousText;
-            inputE.innerText = 0;    
-            // count = 0;
-        })
-        if (currentValue == inputE.innerText) {
-            final.innerText = currentValue
-        }
-        if (save.innerText == previousText || final.innerText == currentValue) {
-            equal.addEventListener('click', function (){
-                const result = parseInt(save.innerText) + parseInt(final.innerText);
-                console.log(result);
-                inputE.innerText = result
-            })
-        }
-    }
-})
-
-three.addEventListener('click', function() {
-    inputE.innerText  += three.innerText;
-    currentValue = inputE.innerText
-    console.log(currentValue);
-
-    if (currentValue == inputE.innerText) {
-        plus.addEventListener('click', function(){
-            let previousText = currentValue;
-            save.innerText = previousText;
-            inputE.innerText = 0;    
-            // count = 0;
-        })
-        if (currentValue == inputE.innerText) {
-            final.innerText = currentValue
-        }
-        if (save.innerText == previousText || final.innerText == currentValue) {
-            equal.addEventListener('click', function (){
-                const result = parseInt(save.innerText) + parseInt(final.innerText);
-                console.log(result);
-                inputE.innerText = result
-            })
-        }
-    }
-})
-
-two.addEventListener('click', function() {
-    inputE.innerText  += two.innerText;
-    currentValue = inputE.innerText
-    console.log(currentValue);
-
-    if (currentValue == inputE.innerText) {
-        plus.addEventListener('click', function(){
-            let previousText = currentValue;
-            save.innerText = previousText;
-            inputE.innerText = 0;    
-            // count = 0;
-        })
-        if (currentValue == inputE.innerText) {
-            final.innerText = currentValue
-        }
-        if (save.innerText == previousText || final.innerText == currentValue) {
-            equal.addEventListener('click', function (){
-                const result = parseInt(save.innerText) + parseInt(final.innerText);
-                console.log(result);
-                inputE.innerText = result
-            })
-        }
-    }
-})
-
-one.addEventListener('click', function() {
-    inputE.innerText += one.innerText;
-    currentValue = inputE.innerText
-    console.log(currentValue);
-
-    if (currentValue == inputE.innerText) {
-        plus.addEventListener('click', function(){
-            let previousText = currentValue;
-            save.innerText = previousText;
-            inputE.innerText = 0;    
-            // count = 0;
-        })
-        if (currentValue == inputE.innerText) {
-            final.innerText = currentValue
-        }
-        if (save.innerText == previousText || final.innerText == currentValue) {
-            equal.addEventListener('click', function (){
-                const result = parseInt(save.innerText) + parseInt(final.innerText);
-                console.log(result);
-                inputE.innerText = result
-            })
-        }
-    }
-})
+for(let i = 0; i < btn.length; i++)
+    btn[i].addEventListener('click', function(){
+        // inputE.textContent = ''
+        inputE.textContent += btn[i].textContent
+    })
 
 cancel.addEventListener('click', function(){
-    inputE.innerText = 0;
-    currentValue = inputE.innerText
-    console.log(currentValue);
-    final.innerText = ' ';
-    save.innerText = ' '
+    inputE.textContent = null;
+    numberGotten.numberfirst = ''
+    numberGotten.numberSecond = ''
 })
-
-zero.addEventListener('click', function() {
-    inputE.innerText += zero.innerText;
-})
-
-dot.addEventListener('click', function() {
-    inputE.innerText += dot.innerText;
-})
-
-// const addition = function (a,b){
-//      a + b
-// }
-
-// //   currentValue = inputE.innerText
-//         // console.log(currentValue);
-
-// addition(currentValue,5)
-
-// equal.addEventListener('click', function(){
-//     inputE.innerText = addition(3,4)
-// })
-

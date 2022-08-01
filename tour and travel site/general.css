@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 10px;
+}
+
+body{
+    width: 100vw;
+    height: auto;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
+.d-grid{
+    display: grid;
+}
+
+.d-flex{
+    display: flex;
+}
+
+.align{
+    align-items: center;
+}
+
+.just-center{
+    justify-content: center;
+}
+
+.main-padding{
+    padding: 0 15rem;
+}
+
+a{
+    text-decoration: none;
+}

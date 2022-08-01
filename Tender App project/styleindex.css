@@ -47,6 +47,7 @@
     visibility: hidden;
     flex-direction: column;
     color: #dbdb14;
+    z-index: 9999;
 }
 
 .close{
@@ -189,16 +190,25 @@
 }
 
 .font-popup{
-    width: 100%;
-    height: 70%;
+    width: 50%;
+    height: 50%;
     overflow: hidden;
     background-color: #ccccff;
     position: absolute;
-    left: 60%;
-    top: 15%;
+    left: 95%;
+    top: 17%;
     z-index: 9999;
     padding: 2rem;
     visibility: hidden;
+}
+
+.font-popup h3{
+    font: 3rem 'Pacifico';
+}
+
+#fontDecide{
+    width: 70%;
+    height: 15%;
 }
 
 .chat-popup{
@@ -300,14 +310,6 @@
 .chatlist{
     width: 35%;
     height: 100%;
-}
-
-.chatroom{
-    width: 63%;
-    height: 100%; 
-    flex-direction: column;
-    row-gap: 4rem;
-    /* justify-content: space-between; */
 }
 
 .chathead{
@@ -440,10 +442,156 @@
     margin-bottom: 2rem;
 }
 
+.chat-dispay span{
+    width: 70%;
+    height: 100%;
+}
+
 .chat-dispay:hover{
     cursor: pointer;
     border-left: 3px solid blue;
 }
+
+.chat-dis-pic{
+    width: 25%;
+    height: 25%;
+    border-radius: 50%;
+    border: 2px solid #fff;
+}
 /* .chat-dispay h2{
     color: #fff;
 } */
+
+/* STATUS PART */
+.chatroom{
+    width: 63%;
+    height: 100%; 
+    /* flex-direction: column; */
+    gap: 4rem;
+    position: relative;
+    padding: 1rem;
+    overflow: hidden;
+    position: relative;
+    /* justify-content: space-between; */
+}
+
+.status-carousel{
+    width: 100%;
+    height: 40%;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 1rem 2rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* text-align: cente; */
+}
+
+/* .status-carousel:hover{
+    cursor:grab;
+} */
+
+.status-carousel h3{
+    font: 3.5rem 'Kaushan Script';
+    color: #555;
+}
+
+.status-carousel ion-icon{
+    font-size: 3rem;
+    color: #fff;
+}
+
+.status-carousel ion-icon:hover{
+    cursor: pointer;
+}
+
+.status-updates{
+    width: 3%;
+    height: 100%;
+    border: 2px solid #000;
+    margin-right: 2rem;
+}
+
+.statusUpdateDiv{
+    position: absolute;
+    width: 70%;
+    height: 70%;
+    background-color: #ccccff;
+    top: 20%;
+    left: 20%;
+    padding: 2rem;
+    overflow: hidden;
+    overflow-y: scroll;
+    visibility: hidden;
+}
+
+.imageDiv{
+    width: 100%;
+    height: 40%;
+    border: 2px solid #555;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
+.statusUpdateDiv h3{
+    font: 2rem 'Helvetica';
+    margin-bottom: 1rem;
+}
+
+.statusUpdateDiv p{
+    font: 2rem 'Helvetica';
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.statusUpdateDiv button{
+    padding: 1rem 2rem;
+}
+
+.statusText{
+    width: 100%;
+    height: 40%;
+    border: 2px solid #555;
+    font: 2rem 'Helvetica';
+}
+
+#choosingFile{
+    width: 60%;
+    height: 20%;
+}
+
+.chatRoom{
+    width: 100%;
+    height: 50%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background: #ccccff;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    /* z-index: 9999; */
+    /* padding: 2rem; */
+    overflow: hidden;
+}
+
+.chatRoom ion-icon{
+    columns: #555;
+    font-size: 2rem;
+}
+
+.chatRoom ion-icon:hover{
+    color: #fff;
+    cursor: pointer;
+}
+
+.chatRoomHeader{
+    width: 100%;
+    height: 10rem;
+    background-color: #666680;
+    padding: 1rem;
+}

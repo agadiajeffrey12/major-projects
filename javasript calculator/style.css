@@ -55,6 +55,7 @@ section{
     height: 25%;
     width: 100%;
     margin-bottom: 4rem;
+    position: relative;
 }
 
 .input div{
@@ -69,6 +70,29 @@ section{
     display: flex;
     align-items: flex-end;
     justify-content: flex-end;
+    overflow: hidden;
+    overflow-x:scroll ;
+}
+
+.subandDiv{
+    color: #fff;
+    font: 8rem 'Helvetica';
+    width: 50%;
+    height: 80%;
+    background-color: rgb(240, 13, 13);
+    outline: none;
+    border: none;
+    text-align: right;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    overflow: hidden;
+    position: absolute;
+    visibility: hidden;
+}
+
+.d-visi{
+    visibility: visible;
 }
 
 .box{
@@ -101,6 +125,26 @@ section{
 }
 
 .buts{
+    color: #fff;
+    font: 2rem 'Helvetica';
+    width: 12.4%;
+    height: 5rem;
+    background-color: rgba(34, 33, 33, 0.89);
+    outline: none;
+    border: none;
+}
+
+.opp{
+    color: #fff;
+    font: 2rem 'Helvetica';
+    width: 12.4%;
+    height: 5rem;
+    background-color: rgba(34, 33, 33, 0.89);
+    outline: none;
+    border: none;
+}
+
+.equal{
     color: #fff;
     font: 2rem 'Helvetica';
     width: 12.4%;

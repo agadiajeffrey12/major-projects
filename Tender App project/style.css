@@ -61,3 +61,11 @@ button:hover{
 .border-radius{
     border-radius: 10px;
 }
+
+.hidden{
+    visibility: hidden;
+}
+
+.translate{
+    transform: translateX(400%)
+}

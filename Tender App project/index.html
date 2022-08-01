@@ -11,6 +11,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;1,400&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;1,100;1,200&family=Pacifico&family=Rubik:ital,wght@0,300;0,500;1,300;1,400&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;1,400&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;1,100;1,200&family=Pacifico&family=Rubik:ital,wght@0,300;0,500;1,300;1,400&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
 </head>
 <body class="bdb">
     <section class="main d-flex">
@@ -72,6 +75,13 @@
             <div class="close-chat-box d-flex just-end">
                 <div class="b" onclick="closeFont()"></div>
             </div>
+            <h3>Pick fonts from within</h3>
+            <select name="" id="fontDecide" class="border-radius">
+                <option value="first">Helvetica</option>
+                <option value="default">Pacifico</option>
+                <option value="second">Kaushan</option>
+                <option value="third">Pacifico</option>
+            </select>
         </div>
         <div class="chat-popup border-radius">
             <div class="close-chat-box d-flex just-end">
@@ -98,7 +108,7 @@
                             <h1 class="cd">Tender</h1>
                         <div class="d-flex just-space">
                             <input type="text" placeholder="search" class="headinput border-radius font-white">
-                            <button class="inputsearch font-white border-radius">search</button>
+                            <button class="inputsearch font-white border-radius" onclick="searched()">search</button>
                         </div>
                     </header>
                     <!-- input field for chat -->
@@ -116,7 +126,35 @@
                         </span>
                     </div>
                 </div>
-                <div class="chatroom background border-radius"></div>
+                <div class="chatroom background border-radius">
+                    <div class="status-carousel d-flex ">
+                        <h3>Update Status</h3>
+                        <ion-icon name="add-outline" onclick="openStatus()"></ion-icon>
+                    </div>
+                    <!-- status update div -->
+                    <div class="statusUpdateDiv border-radius">
+                        <div class="close-sheild-response d-flex just-end">
+                            <div class="b" onclick="closeStatus()"></div>
+                        </div>
+                        <div class="imageDiv border-radius"></div>
+                        <h3>Add a memory</h3>
+                        <input type="file" id="choosingFile" accept="image/*,.pdf,.png,.jpg,.jpeg">
+                        <button class="border-radius">Update status</button>
+                        <input type="text" class="statusText border-radius" placeholder="Add a text">
+                        <p>
+                            Add a text
+                        </p>
+                        <button class="border-radius btnStatus" onclick="displayStatusTextValue()">Update status</button>
+                    </div>
+                    <div class="chatRoom hidden">
+                        <header class="chatRoomHeader">
+                            <ion-icon name="arrow-up-outline" onclick="takeChatRoomUp()" class="upArrow"></ion-icon>
+                            <ion-icon name="arrow-down-outline" onclick="takeChatRoomDown()" class="downArrow hidden"></ion-icon>
+                            <ion-icon name="close-outline" onclick="closeChatRoom()"></ion-icon>
+                            <p id="chatRoomName"></p>
+                        </header>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
