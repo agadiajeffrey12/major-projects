@@ -1,0 +1,993 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.body{
+    height: auto;
+    margin: 0;
+    padding: 0;
+    background-color: #e3f5f5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p{
+    margin: 0;
+    padding: 0;
+}
+
+/* dm-sans-regular - latin */
+@font-face {
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/dm-sans-v11-latin-regular.eot'); /* IE9 Compat Modes */
+    src: local(''),
+         url('../fonts/dm-sans-v11-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../fonts/dm-sans-v11-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+         url('../fonts/dm-sans-v11-latin-regular.woff') format('woff'), /* Modern Browsers */
+         url('../fonts/dm-sans-v11-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('../fonts/dm-sans-v11-latin-regular.svg#DMSans') format('svg'); /* Legacy iOS */
+  }
+  /* dm-sans-italic - latin */
+  @font-face {
+    font-family: 'DM Sans';
+    font-style: italic;
+    font-weight: 400;
+    src: url('../fonts/dm-sans-v11-latin-italic.eot'); /* IE9 Compat Modes */
+    src: local(''),
+         url('../fonts/dm-sans-v11-latin-italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../fonts/dm-sans-v11-latin-italic.woff2') format('woff2'), /* Super Modern Browsers */
+         url('../fonts/dm-sans-v11-latin-italic.woff') format('woff'), /* Modern Browsers */
+         url('../fonts/dm-sans-v11-latin-italic.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('../fonts/dm-sans-v11-latin-italic.svg#DMSans') format('svg'); /* Legacy iOS */
+  }
+  /* dm-sans-700 - latin */
+  @font-face {
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/dm-sans-v11-latin-700.eot'); /* IE9 Compat Modes */
+    src: local(''),
+         url('../fonts/dm-sans-v11-latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../fonts/dm-sans-v11-latin-700.woff2') format('woff2'), /* Super Modern Browsers */
+         url('../fonts/dm-sans-v11-latin-700.woff') format('woff'), /* Modern Browsers */
+         url('../fonts/dm-sans-v11-latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('../fonts/dm-sans-v11-latin-700.svg#DMSans') format('svg'); /* Legacy iOS */
+  }
+
+  /* rubik-regular - latin */
+@font-face {
+    font-family: 'Rubik';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/rubik-v20-latin-regular.eot'); /* IE9 Compat Modes */
+    src: local(''),
+         url('../fonts/rubik-v20-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../fonts/rubik-v20-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+         url('../fonts/rubik-v20-latin-regular.woff') format('woff'), /* Modern Browsers */
+         url('../fonts/rubik-v20-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('../fonts/rubik-v20-latin-regular.svg#Rubik') format('svg'); /* Legacy iOS */
+  }
+
+main{
+    padding: 0;
+    width: 100vw;
+    height: auto;
+    background-color: #e3f5f5;
+}
+
+.d-flex{
+    display: flex;
+}
+
+.padding{
+    padding: 0 130px;
+}
+
+.align{
+    align-items: center;
+}
+
+nav ul{
+    list-style: none;
+}
+
+.flexend{
+    margin-left: auto;
+}
+
+nav li{
+    margin-right: 30px;
+    font-size: 16px;
+    font-family: 'DM Sans';
+    font-weight: lighter;
+
+}
+
+nav a{
+    text-decoration: none;
+    color: black;
+}
+
+.justify{
+    justify-content: center;
+}
+
+nav{
+    height: 13vh;
+    width: 100%;
+}
+
+.hero{
+    height: 70vh;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 60px;
+}
+
+.hero div{
+    height: 100%;
+    width: 50%;
+}
+
+.bd{
+    border: 1px solid black;
+}
+
+.hero h3{
+    font-size: 2.5rem;
+    font: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.hero p{
+    font-family: 'DM Sans';
+    font-size: 18px;
+    color: #4d4664;
+    line-height: 35px;
+    margin: 0 0 20px;
+    margin-bottom: 30px;
+}
+
+.hero section{
+    font: 19px 'DM Sans';
+    color: #4d4664;
+}
+
+.rowlex{
+    overflow: hidden;
+}
+
+.hero button:first-child{
+    height: 50px;
+    width: 70%;
+    background-color: #3991de;
+    color: #ffffff;
+    font: 15px 'DM Sans';
+    border-radius: 7px;
+    margin-right: 10px;
+}
+
+.hero button:hover{
+    cursor: pointer;
+    color: #517ea7;
+}
+
+.hero button:first-child:hover{
+    cursor: pointer;
+    color: #ffffff;
+}
+
+.buts{
+    width: 100%;
+    height: 10%;
+    overflow-x: hidden;
+    margin-top: 20px;
+}
+
+.hero button{
+    height: 50px;
+    border: 1px solid #3991de;
+    color: #3991de;
+    font: 15px 'DM Sans';
+    width: 70%;
+    border-radius: 7px;
+}
+
+.hero span{
+    color: rgb(114, 208, 236);
+}
+
+.k img{
+    border-radius: 10px;
+}
+
+.hero-1{
+    height: 70vh;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 60px;
+}
+
+.hero-1 div{
+    height: 100%;
+    width: 50%;
+}
+
+.hero-1 h3{
+    font-size: 2.5rem;
+    font: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.hero-1 p{
+    font-family: 'DM Sans';
+    font-size: 15px;
+    color: #4d4664;
+    line-height: 30px;
+    margin: 0 0 20px;
+    margin-bottom: 30px;
+}
+
+.hero-1 section{
+    font: 15px 'DM Sans';
+    color: #4d4664;
+}
+
+.hero-1 span{
+    color: rgb(114, 208, 236);
+}
+
+.hero-1 button{
+    height: 60px;
+    width: 140px;
+    background-color: #3991de;
+    border: 1px solid #3991de;
+    border-radius: 5px;
+    font-family: 'DM Sans';
+    color: #ffffff;
+}
+
+.hero-2{
+    height: 70vh;
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+.hero-2 div{
+    padding: 0 40px;
+    height: 35%;
+    justify-content: space-between;
+}
+
+.hero-2 h2{
+    font: 2.3rem 'DM Sans';
+    margin-bottom: 40px;
+}
+
+.hero-2 span{
+    color: #3991de;
+}
+
+.hero-2 section{
+    height: 100%;
+    text-align: center;
+    margin-top: 40px;
+    width: 25%;
+}
+
+.hero-2 h3{
+    font: 20px 'DM Sans';
+    text-align: center;
+    font-weight: 500;
+}
+
+.hero-3{
+    background: linear-gradient(98.04deg, #4E6FE2 7.77%, #820460 88.58%);
+    background-image: linear-gradient(98.04deg, rgb(78, 111, 226) 7.77%, rgb(130, 4, 96) 88.58%);
+    background-position-x: initial;
+    background-position-y: initial;
+    background-size: initial;
+    background-repeat-x: initial;
+    background-repeat-y: initial;
+    background-attachment: initial;
+    background-origin: initial;
+    background-clip: initial;
+    background-color: initial;
+    box-shadow: 0px 20px 50px rgb(0 0 0 /30%);
+    height: 80vh;
+    width: 100%;
+}
+
+.hero-3 div:first-child{
+    height: 100%;
+    width: 65%;
+}
+
+.hero-3 div{
+    height: 100%;
+    width: 35%;
+}
+
+.hero-3 h3{
+    font-size: 2rem;
+    font: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    margin-bottom: 30px;
+    color: #fff;
+}
+
+.hero-3 p{
+    font-family: 'DM Sans';
+    font-size: 15px;
+    color: #fff;
+    line-height: 25px;
+    margin: 0 0 10px;
+    margin-bottom: 30px;
+}
+
+.hero-3 section{
+    font: 19px 'DM Sans';
+    color: #ffffff;
+}
+
+.row{
+    width: 5px;
+}
+
+.hero-3 button:first-child{
+    height: 50px;
+    width: 50%;
+    background-color: #fff;
+    color: #3991de;
+    font: 15px 'DM Sans';
+    border-radius: 7px;
+    margin-right: 10px;
+    border: 1px solid #fff;
+}
+
+.hero-3 button:hover{
+    cursor: pointer;
+    color: #517ea7;
+}
+
+.hero-3 button:first-child:hover{
+    cursor: pointer;
+    color: #ffffff;
+}
+
+.buts{
+    width: 100%;
+    height: 0%;
+    overflow-x: hidden;
+    margin-top: 20px;
+}
+
+
+.n{
+    background-color: transparent;
+    height: 50px;
+    width: 50%;
+    color: #fff;
+    font: 15px 'DM Sans';
+    border-radius: 7px;
+    margin-right: 10px;
+    border: 1px solid #fff;
+}
+
+.hero-3 span{
+    color: rgb(114, 208, 236);
+}
+
+.k img{
+    border-radius: 10px;
+}
+
+.marple{
+    height: 40%;
+    width: 100%;
+    padding-top: 90px;
+}
+
+.hero-4{
+    height: 200vh;
+    width: 100%;
+    margin-top: 40px;
+}
+
+.hero-4 header{
+    height: 5%;
+    width: 100%;
+    font: 34px 'arial';
+}
+
+.big{
+    color: #3991de;
+}
+
+.maple{
+    height: 90%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.maple-1{
+    height: 50%;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.maple-2{
+    height: 95%;
+    width: 32%;
+    background-color: rgba(245, 241, 237, 0.884);
+}
+
+.maple-2 img{
+    border-top-right-radius: 11px;
+    border-top-left-radius: 11px;
+}
+
+.maple-21{
+    padding: 0 7px;
+}
+
+.maple-21 h2{
+    font-family: arial;
+    font-style: normal;
+    font-weight: 100;
+    font-size: 24px;
+}
+
+.maple-21 span{
+    font-family: arial;
+    font-style: normal;
+    font-weight: 100;
+    font-size: 13px;
+    height: 7px;
+    padding-bottom: 10px;
+}
+
+.maple-21 p{
+    font: 16px 'DM Sans';
+    margin-top: 10px;
+}
+
+.sec{
+    height: 100%;
+    width: 50%;
+}
+
+.sec p{
+    width: 90%;
+    height: 100%;
+    font: 30px 'DM Sans';
+}
+
+.sec div{
+    width: 20%;
+    height: 100%;
+    font: 16px 'DM Sans';
+}
+
+.opp{
+    color: red;
+    font: 16px 'DM Sans';
+}
+
+.maple-23{
+    width: 100%;
+    height: 12%;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.maple-23 button{
+    width: 40%;
+    height: 70%;
+    
+}
+
+.apply{
+    background-color: #3991de;
+    color: #fff;
+    border: 1px solid #3991de;
+    font-family: 'DM Sans';
+    border-radius: 7px;
+}
+
+
+.app{
+    background-color: #fff;
+    color: #3991de;
+    border: 1px solid #3991de;
+    font-family: 'DM Sans';
+    border-radius: 7px;
+}
+.maple-22{
+    width: 100%;
+    height: 10%;
+    margin-top: 15px;
+}
+.maple-3{
+    height: 100%;
+    width: 32%;
+    background-color: rgba(245, 241, 237, 0.884);
+}
+
+.maple-3 img{
+    border-top-right-radius: 11px;
+    border-top-left-radius: 11px;
+}
+
+
+.maple-27 p{
+    font: 14px 'DM Sans';
+    margin-top: 6px;
+}
+
+.maple-27{
+    padding: 0 7px;
+}
+
+.maple-27 h2{
+    font-family: arial;
+    font-style: normal;
+    font-weight: 100;
+    font-size: 24px;
+}
+
+.maple-27 span{
+    font-family: arial;
+    font-style: normal;
+    font-weight: 100;
+    font-size: 13px;
+    height: 7px;
+    padding-bottom: 10px;
+}
+
+.hero-5{
+    height: 53vh;
+    width: 100%;
+}
+
+.hero-5-1{
+    height: 15%;
+    width: 100%;
+    font: 36px 'arial';
+}
+
+.hero-5-2{
+    height: 90%;
+    width: 100%;
+}
+
+.hero-5-1 span{
+    color: #3991de;
+}
+
+.hero-5-1 button{
+    width: 30%;
+    height: 100%;
+    color: white;
+    background-color: #3991de;
+    border: 1px solid #3991de ;
+    border-radius: 6px;
+    font-family: 'DM Sans';
+}
+
+.hero-5-1 p{
+    font: 20px 'DM Sans';
+}
+
+.hero-33{
+    height: 100%;
+    width: 50%;
+    font-family: 'DM Sans';
+    padding-top: 60px;
+}
+
+.hero-6{
+    width: 100%;
+    height: 150vh;
+    overflow: hidden;
+}
+
+.hero-6header{
+    height: 7%;
+    width: 100%;
+    font-size: 30px;
+    font-family: 'DM Sans';
+}
+
+.hero-6header span{
+    color: #3991de;
+}
+
+.hero-6rows{
+    height: 20%;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 25px;
+}
+
+.hero-6rows img{
+    height: 100%;
+    border-radius: 10px;
+    width: 23%;
+}
+
+.hero-7{
+    height: 170vh;
+    width: 100%;
+  
+}
+
+.hero-7text{
+    height: 7%;
+    width: 100%;
+    font: 30px 'DM Sans';
+}
+
+.hero-7text h2{
+    font: 30px 'DM Sans';
+}
+
+.hero-7text span{
+    color: #3991de;
+    font: 30px 'DM Sans';
+}
+
+.hero-7box{
+    height: 45%;
+    width: 100%;
+    padding: 0 7px;
+    margin-bottom: 20px;
+    justify-content: space-between;
+
+}
+
+.hero-7boxes{
+    height: 100%;
+    width: 30%;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.hero-7img{
+    height: 20%;
+    width: 100%;
+}
+
+.hero-7img img{
+    border-radius: 50%;
+}
+
+.hero-7para{
+    height: 50%;
+    width: 100%;
+    padding: 0 25px;
+    text-align: center;
+}
+
+.hero-7para{
+font: 20px 'DM Sans';
+}
+
+.hr{
+    width: 40%;
+    height: 2px;
+    background-color: #3991de;
+}
+
+.hero-hr{
+    width: 100%;
+    height: auto;
+    text-align: center;
+}
+
+.gates{
+    height: 10%;
+    width: 100%;
+    
+}
+
+.gates p{
+    font: 20px 'DM Sans';
+}
+
+.gates span{
+    font: 17px 'DM Sans';
+    color: rgb(172, 168, 168);
+}
+
+.hero-8{
+    height: 60vh;
+    width: 100%;
+    margin-top: 40px;
+    background-color: #3991de;
+    padding: 20px 100px;
+}
+
+.hero-8txt{
+    height: 15%;
+    padding: 10px 0;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.hero-8txt h2{
+    font: 40px 'DM Sans';
+    color: #fff;
+}
+
+.windows{
+    height: 85%;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.windowspec{
+    width: 46%;
+    height: 80%;
+    border-radius: 14px;
+    background-color: #fff;
+    padding: 30px;
+}
+
+.windowspec p{
+    font: 17px 'DM Sans';
+    line-height: 25px;
+}
+
+.spec{
+    width: 100%;
+    height: 6%;
+    text-align: center;
+    font: 16px'DM Sans';
+    margin-top: 20px;
+    font-weight: 500;
+}
+
+.hero-9{
+    height: 130vh;
+    width: 100%;
+}
+
+
+.hero-9txt{
+    height: 10%;
+    padding: 10px 0;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.hero-9txt h2{
+    font: 40px 'DM Sans';
+    color: #000;
+}
+
+
+.hero-9txt h2{
+    font: 40px 'DM Sans';
+    color: #3991de;
+}
+
+.diamond{
+    height: 85%;
+    width: 70%;
+    padding: 10px 0;
+}
+
+.clicks{
+    font-size: 16px;
+}
+
+.click{
+    font-size: 16px;
+}
+
+.png:hover{
+    cursor: pointer;
+}
+
+.questions{
+    height: auto;
+    font: 23px 'DM Sans';
+    width: 100%;
+    background-color: #fff;
+    padding: 15px;
+}
+
+.question{
+    width: 100%;
+    height: 50%;
+    margin-bottom: 10px;
+}
+
+
+.quest{
+    width: 100%;
+    height: 50%;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+
+.questions section{
+    font: 23px 'DM Sans';
+    margin-top: 5px;
+}
+
+.quest section{
+    font: 23px 'DM Sans';
+    margin-top: 5px;
+}
+
+.minus{
+    position: relative;
+    bottom: 5px;
+}
+
+.min{
+    position: relative;
+    bottom: 5px;
+}
+
+.d-none{
+    display: none;
+}
+
+.hero-10{
+    height: 50vh;
+    width: 100%;
+}
+
+.hero-10div{
+    height: 100%;
+    width: 50%;
+}
+
+.hero-10div h2{
+    font: 30px 'DM Sans';
+    margin-bottom: 15px;
+}
+
+
+.hero-10div span{
+    font: 20px 'DM Sans';
+}
+
+.contact{
+    width:70%;
+    height: 100%;
+    padding: 130px 0;
+    padding-left: 30px;
+}
+
+.hero-11{
+    height: 40vh;
+    width: 100%;
+}
+
+.bakes{
+    height: 50%;
+    width: 100%;
+    justify-content: space-between;
+    padding: 0 100px;
+}
+
+.bakes img{
+    width: 7%;
+    height: 50%;
+    opacity: .5;
+}
+
+.lastitem{
+    height: 80vh;
+    width: 100%;
+    background-color: #0B0D17;
+    padding: 90px 100px 20px 100px;
+    font-size: 15px;
+    color: #fff;
+}
+
+.lastthings{
+    height: 70%;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.butters{
+    width: 20%;
+    height: 100%;
+}
+
+.butters p{
+    font: 15px 'DM Sans';
+    margin-top: 15px;
+}
+
+.iam{
+    width: 100%;
+    height: auto;
+    
+}
+
+.thelinks{
+    width: 17%;
+    height: 100%;
+}
+
+.thelinks li{
+    font-size: 15px;
+    list-style: none;
+    font-family: 'DM Sans';
+    line-height: 38px;
+}
+
+.thelinks h2{
+    font-size: 25px;
+    list-style: none;
+    font-family: 'DM Sans';
+}
+
+.thelinks a{
+    color: #fff;
+    text-decoration: none;
+}
+
+.thelinks a:hover{
+    color: #3991de;
+    text-decoration: underline;
+}
+
+.thelinks li{
+    font-size: 15px;
+    list-style: none;
+    font-family: 'DM Sans';
+    line-height: 38px;
+}
+
+.the{
+    height: 100%;
+    width: 25%;
+}
+
+.the li{
+    font-size: 15px;
+    list-style: none;
+    font-family: 'DM Sans';
+    line-height: 38px;
+}
+
+.the h2{
+    font-size: 25px;
+    list-style: none;
+    font-family: 'DM Sans';
+}
+
+.the a{
+    color: #fff;
+    text-decoration: none;
+}
+
+.the a:hover{
+    color: #3991de;
+    text-decoration: underline;
+}
+
