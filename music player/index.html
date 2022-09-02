@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>local Music Player</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main class="main-content man">
+        <div class="playlist">
+            <div><ion-icon name="chevron-down-outline"></ion-icon></div>
+            <p>Now Playing</p>
+            <div class="pick-file"><ion-icon name="ellipsis-horizontal-outline"></ion-icon></div>
+        </div>
+        <div class="image-section">
+            <div class="mp-image"></div>
+        </div>
+        <audio src="" class="audio"></audio>
+        <div class="song-title-description">
+            <p class="song-title">First Class</p>
+            <p class="song-artist">Jack Harlow</p>
+        </div>
+        <div class="timer">
+            <div class="start-time">00:00</div>
+            <div class="time">
+                <div class="progress"></div>
+            </div>
+            <div class="end-time">00:00</div>
+        </div>
+        <div class="navigation">
+            <button class="prev">
+                <ion-icon name="play-skip-back-outline"></ion-icon>
+            </button>
+            <button class="plays"><ion-icon name="caret-forward-outline"></ion-icon>
+                <button class="pause"><ion-icon name="pause-outline"></ion-icon></button></button>
+            <button class="forward">
+               
+                <ion-icon name="play-skip-forward-outline"></ion-icon>
+            </button>
+        </div>
+        <div class="activities">
+            <button class="loop">
+                <ion-icon name="repeat-outline"></ion-icon>
+            </button>
+            <button class="shuffle">
+                <ion-icon name="shuffle-outline"></ion-icon>
+            </button>
+            <button class="favorites"><ion-icon name="heart"></ion-icon></button>
+            <button class="playlist show"><ion-icon name="list-circle-outline"></ion-icon></button>
+        </div>
+        <div class="audio-library">
+            <div class="library-head">
+                <button class="hide"><ion-icon name="close-outline"></ion-icon></button>
+                <p>Music List</p>
+            </div>
+        </div>
+        <div class="add-favorite">
+            <ion-icon name="checkmark-circle-outline"></ion-icon>
+            <p>Added To Favorites</p>
+        </div>
+        <div class="input-type">
+            <input type="file" name="myFile[]" id="myFile" class="input" multiple>
+            <button class="input-button">Add only mp3 files</button>
+            <span class="input-label">No file selected</span>
+        </div>
+    </main>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<script src="main.js"></script>
+<script src="music-list.js"></script>
+</body>
+</html>

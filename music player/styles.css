@@ -1,0 +1,324 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 10px;
+}
+
+body{
+    max-width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-content{
+ width: 30%;
+ height: 75vh;
+ padding: 1.5rem 1rem;
+ background-color:linear-gradient(50.04deg, #4E6FE2 10.07%, #a10f7a 90.03%);
+    background-image: linear-gradient(98.04deg, rgb(42, 59, 117) 7.77%, rgb(127, 93, 134) 88.58%);
+    background-position-x: initial;
+    background-position-y: initial;
+    background-size: initial;
+    background-attachment: initial;
+    background-origin: initial;
+ border-radius: 10px;
+ box-shadow: inset 4px 4px 6px -1px rgba(0,0,0,0.15),
+                    -6px -6px 10px -1px rgba(37, 36, 36, 0.7);
+/* display:flex;
+flex-direction: column;
+flex-wrap: wrap;
+justify-content: center;
+align-items: center; */
+position: relative;
+overflow: hidden;
+}
+
+.playlist{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.playlist div ion-icon{
+    font-size: 2.5rem;
+    color:rgb(236, 237, 238);
+    cursor: pointer;
+}
+
+.playlist p{
+    font-size: 1.5rem;
+    color:rgb(236, 237, 238);
+}
+
+.image-section{
+    height: 40%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+}
+
+.mp-image{
+    height: 170px;
+    width: 170px;
+    border-radius: 50%;
+    background: url(images/istockphoto-1171805592-170667a.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    animation: anim 5s linear infinite;
+    animation-play-state: paused;
+}
+
+.main-content.play .mp-image{
+    animation-play-state: running;
+}
+
+@keyframes anim{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+.song-title-description{
+    width: 100%;
+    text-align: center;
+    margin-top: 2rem;
+    color: white;
+}
+
+.song-title{
+    font: 2.4rem 'sans-serif';
+}
+
+.song-artist{
+    font: 1.4rem 'sans-serif';
+}
+
+.timer{
+    width: 100%;
+    font: 1.2rem 'sans-serif';
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1.5rem;
+    padding: 0 2rem;
+}
+
+.time{
+    width: 100%;
+    height: 6px;
+    background-color:#f0f0f0;
+    margin: 0 1.5rem;
+    border-radius: 5px;
+}
+
+.progress{
+    width: 0;
+    height: inherit;
+    border-radius: inherit;
+    background-color: rgba(67, 103, 133, 0.897);
+    position: relative;
+    cursor: pointer;
+}
+
+.progress::before{
+    content: "";
+    height: 12px;
+    width: 12px;
+    background: #000;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    right: -5px;
+    transform: translateY(-50%);
+    background: rgb(34, 110, 172);
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.time:hover .progress::before{
+    opacity: 1;
+    cursor: pointer;
+}
+
+.audio{
+    font-size: 3rem;
+}
+
+.navigation{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    position: relative;
+}
+
+.navigation button{
+    height: 3rem;
+    width: 3rem;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    font-size: 2.5rem;
+    color: #f9f9f9;
+    cursor: pointer;
+    margin: 0 1.5rem;
+    
+}
+
+.plays{
+    visibility: visible;
+}
+
+.pause{
+    position: absolute;
+    top: 1.7px;
+    right: 43%;
+    visibility: hidden;
+}
+
+.activities{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3rem;
+    position: relative;
+}
+
+.activities button{
+    height: 3rem;
+    width: 3rem;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    font-size: 2.5rem;
+    color: #f9f9f9;
+    cursor: pointer;
+}
+
+.shuffle{
+    position: absolute;
+    left: 5px;
+    visibility: hidden;
+}
+
+.color{
+    color: #4e6fe2 !important;
+}
+
+.favorite-color{
+    color:#f70cbc !important;
+}
+
+.audio-library{
+    width: 100%;
+    border-bottom-left-radius: inherit;
+    border-bottom-right-radius: inherit;
+    background-color: #405058;
+    position: absolute;
+    left: 0;
+    padding: 1rem 2rem;
+    bottom: 0rem;
+    visibility: hidden;
+}
+
+.library-head{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1rem;
+    color:rgb(236, 237, 238);
+    font-size: 1.5rem;
+    
+}
+
+.library-head button{
+    height: 3rem;
+    width: 3rem;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    font-size: 2.5rem;
+    color: #f9f9f9;
+    cursor: pointer;
+    
+}
+
+.add-favorite{
+    font: 1.5rem 'sans-serif';
+    color:#f0f0f0;
+    position: absolute;
+    left: 10rem;
+    right: 15rem;
+    top: 15rem;
+    bottom: 5rem;
+    height: 150px;
+    width: 200px;
+    background-color:rgba(12, 11, 11, 0.7);
+    border-radius: 5px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    visibility: hidden;
+}
+
+.add-favorite ion-icon{
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    color: #dd068b;
+}
+
+.input-type{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width:50%;
+    position: absolute;
+    top: 40px;
+    right: 10px; 
+    background: #f0f0f0;
+    border-radius: 10px;
+    visibility: hidden;
+}
+
+#myFile{
+    display: none;
+}
+
+.input-button{
+    color: #fff;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    background: #27bbbb;
+    border: none;
+    margin-right: 1rem;
+    cursor: pointer;
+}
+
+.input-label{
+    max-width: 100px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.show-input{
+    visibility: visible;
+}
