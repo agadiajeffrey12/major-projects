@@ -1,0 +1,81 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100vw;
+    height: auto;
+    overflow-x: hidden;
+}
+
+html{
+    font-size: 10px;
+}
+
+.d-flex{
+    display: flex;
+    flex-wrap:wrap;
+}
+
+.flex-direction-col{
+    flex-direction: column;
+}
+
+.justify-center{
+    justify-content: center;
+}
+
+.justify-start{
+    justify-content: flex-start;
+}
+
+.justify-end{
+    justify-content: flex-end;
+}
+
+.justify-between{
+    justify-content: space-between;
+}
+
+.justify-around{
+    justify-content: space-around;
+}
+
+.align-center{
+    align-items: center;
+}
+
+.align-base{
+    align-items: baseline;
+}
+
+button{
+    outline: none;
+    border: none;
+    background-color: rgb(22, 85, 112);
+    color: #f0f0f0;
+    cursor: pointer;
+}
+
+.pos-rel{
+    position: relative;
+}
+
+.pos-abs{
+    position: absolute;
+}
+
+ion-icon{
+    color: black;
+    cursor: pointer;
+}
+
+.hide{
+    visibility: hidden;
+}
+
+.show{
+    visibility: visible;
+}

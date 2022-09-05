@@ -4,12 +4,280 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="general.css">
+    <title>Quick Express</title>
+    <link rel="stylesheet" href="/css/general.css">
+    <link rel="stylesheet" href="/css/styles.css">
 </head>
 <body>
-    
-    <script src="index.js"></script>
+    <main>
+        <nav class="navigation d-flex">
+            <div class="logo d-flex justify-start align-center">
+                <h3>Quick Express <ion-icon name="cart"></ion-icon></h3>
+            </div>
+            <div class="nav-list d-flex justify-end align-center">
+                <ul class="d-flex">
+                    <li>Home</li>
+                    <li>Categories</li>
+                    <li>Contact</li>
+                </ul>
+            </div>
+        </nav>
+        <section class="advertscreen" id="advert">
+            <div class="placement"></div>
+        </section>
+        <section class="categories-section">
+            <div class="category-bar d-flex justify-center align-center">Top Categories</div>
+            <div class="category">
+                <div class="phone d-flex flex-direction-col justify-center align-center" id="phone">
+                    <img src="images/download (3).jpg" alt="image">
+                    <p id="categorytext">Phones</p>
+                </div>
+                <div class="wrist-watch d-flex flex-direction-col justify-center align-center" id="wrist-watch">
+                    <img src="images/images.jpg" alt="image">
+                    <p id="categorytext">Wrist-watch</p>
+                </div>
+                <div class="shoes d-flex flex-direction-col justify-center align-center" id="shoes">
+                    <img src="images/download (1).jpg" alt="image">
+                    <p id="categorytext">Shoes</p>
+                </div>
+                <div class="clothes d-flex flex-direction-col justify-center align-center" id="clothes">
+                    <img src="images/download (2).jpg" alt="image">
+                    <p id="categorytext">Clothes</p>
+                </div>
+                <div class="phone-accesories d-flex flex-direction-col justify-center align-center" id="accessories">
+                    <img src="images/download (5).jpg" alt="image">
+                    <p id="categorytext">Phone-accesories</p>
+                </div>
+                <div class="home-appliances d-flex flex-direction-col justify-center align-center" id="home">
+                    <img src="images/images (1).jpg" alt="image">
+                    <p id="categorytext">home-appliances</p>
+                </div>
+            </div>
+        </section>
+        <section class="brands">
+            <div id="main-brand">
+                <button class="mainbrandgate" id="mainbrandgate">see more</button>
+            </div>
+            <div class="sub-brand-collection">
+                <div class="sub-brand pos-rel">
+                    <button class="brand-sub" id="brandgate">see more</button>
+                </div>
+            <div class="sub-brand-d d-flex justify-between">
+                <div class="sub-brand-col pos-rel">
+                    <button class="brand-sub" id="brandgate">see more</button>
+                </div>
+                <div class="sub-brand-col pos-rel">
+                    <button class="brand-sub" id="brandgate">see more</button>
+                </div>
+            </div>
+            
+            </div>
+        </section>
+        <section class="most-bought">
+            <div class="most d-flex justify-center align-center">Most Purchased</div>
+            <div class="bought-sect">
+                <div class="bought-section d-flex flex-direction-col justify-center align-center">
+                    <img src="images/download (1).jpg" alt="preview">
+                    <p class="bought-title"></p>
+                    <button class="purchase">Add To Cart</button>
+                </div>
+                <div class="bought-section d-flex flex-direction-col justify-center align-center">
+                    <img src="images/download (1).jpg" alt="preview">
+                    <p class="bought-title"></p>
+                    <button class="purchase">Add To Cart</button>
+                </div>
+                <div class="bought-section d-flex flex-direction-col justify-center align-center">
+                    <img src="images/download (1).jpg" alt="preview">
+                    <p class="bought-title"></p>
+                    <button class="purchase">Add To Cart</button>
+                </div>
+            </div>
+        </section>
+        <section class="section-pop-up" id="section-pop">
+            <div class="section-head d-flex">
+                <div class="input-search d-flex align-center pos-rel">
+                    <input type="text" class="quick-express-search" placeholder="Search on quick express">
+                    <ion-icon name="cart-outline"></ion-icon>
+                    <ion-icon name="search-outline" class="search-icon"></ion-icon>
+                    <div class="cart-counter d-flex justify-center align-center">1</div>
+                </div>
+                <div class=" d-flex justify-end" id="close-pop-up"><ion-icon name="close"></ion-icon></div>
+            </div>
+            <div class="section-hero">
+                <div class="section-description">
+                    <div>
+                        <p>
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque numquam at aut corporis inventore amet veritatis provident odio. Porro mollitia ipsum quasi eius!
+                        </p>
+                    </div>
+                    <div>
+                        <button class="personal-sec">View Cart</button>
+                    </div>
+                </div>
+                <div class="section-image"></div>
+            </div>
+            <div class="shopping-section d-flex">
+                <div class="shopping-menu">
+                    <ul class="d-flex flex-direction-col">
+                        <li>Male shoes</li>
+                        <li>Female shoes</li>
+                        <li>Brands</li>
+                        <li>Cart</li>
+                    </ul>
+                </div>
+                <div class="shopping-area">
+                    <div class="e shop-item d-flex flex-direction-col justify-center align-center">
+                        <img src="/images/download (8).jpg" alt="shoe-image">
+                        <div class="item-description">
+                            <div class="cart-section d-flex justify-between">
+                                <button class="add-to-cart">Add To Cart</button>
+                                <div class="cart-increment d-flex justify-end">
+                                    <div class="cart-increment-button d-flex justify-center align-center">
+                                        <ion-icon name="add-outline"></ion-icon>
+                                    </div>
+                                </div>
+                            </div>
+                           <div class="price-item d-flex justify-center align-center">
+                            <p class="price">$75</p>
+                           </div>
+                        </div>
+                    </div>
+                    <div class="e shop-item d-flex flex-direction-col justify-center align-center">
+                        <img src="/images/download (8).jpg" alt="shoe-image" class="item-pic">
+                        <div class="item-description">
+                            <div class="cart-section d-flex justify-between">
+                                <button class="add-to-cart">Add To Cart</button>
+                                <div class="cart-increment d-flex justify-end">
+                                    <div class="cart-increment-button d-flex justify-center align-center">
+                                        <ion-icon name="add-outline"></ion-icon>
+                                    </div>
+                                </div>
+                            </div>
+                               <div class="price-item d-flex justify-center align-center">
+                            <p class="price">$75</p>
+                           </div>
+                        </div>
+                    </div>
+                    <div class="e shop-item d-flex flex-direction-col justify-center align-center">
+                        <img src="/images/download (8).jpg" alt="shoe-image" class="item-pic">
+                        <div class="item-description">
+                            <div class="cart-section d-flex justify-between">
+                                <button class="add-to-cart">Add To Cart</button>
+                                <div class="cart-increment d-flex justify-end">
+                                    <div class="cart-increment-button d-flex justify-center align-center">
+                                        <ion-icon name="add-outline"></ion-icon>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="price-item d-flex justify-center align-center">
+                                <p class="price">$75</p>
+                               </div>
+                        </div>
+                    </div>
+                    <div class="e shop-item d-flex flex-direction-col justify-center align-center">
+                        <img src="/images/download (8).jpg" alt="shoe-image" class="item-pic">
+                        <div class="item-description">
+                            <div class="cart-section d-flex justify-between">
+                                <button class="add-to-cart">Add To Cart</button>
+                                <div class="cart-increment d-flex justify-end">
+                                    <div class="cart-increment-button d-flex justify-center align-center">
+                                        <ion-icon name="add-outline"></ion-icon>
+                                    </div>
+                                </div>
+                            </div>
+                           <div class="price-item d-flex justify-center align-center">
+                            <p class="price">$75</p>
+                           </div>
+                        </div>
+                    </div>
+                    <div class="e shop-item d-flex flex-direction-col justify-center align-center">
+                        <img src="/images/download (8).jpg" alt="shoe-image">
+                        <div class="item-description">
+                            <div class="cart-section d-flex justify-between">
+                                <button class="add-to-cart">Add To Cart</button>
+                                <div class="cart-increment d-flex justify-end">
+                                    <div class="cart-increment-button d-flex justify-center align-center">
+                                        <ion-icon name="add-outline"></ion-icon>
+                                    </div>
+                                </div>
+                            </div>
+                           <div class="price-item d-flex justify-center align-center">
+                            <p class="price">$75</p>
+                           </div>
+                        </div>
+                    </div>
+                    <div class="e shop-item d-flex flex-direction-col justify-center align-center">
+                        <img src="/images/download (8).jpg" alt="shoe-image" class="item-pic">
+                        <div class="item-description">
+                            <div class="cart-section d-flex justify-between">
+                                <button class="add-to-cart">Add To Cart</button>
+                                <div class="cart-increment d-flex justify-end">
+                                    <div class="cart-increment-button d-flex justify-center align-center">
+                                        <ion-icon name="add-outline"></ion-icon>
+                                    </div>
+                                </div>
+                            </div>
+                           <div class="price-item d-flex justify-center align-center">
+                            <p class="price">$75</p>
+                           </div>
+                        </div>
+                    </div>
+                    <div class="e shop-item d-flex flex-direction-col justify-center align-center">
+                        <img src="/images/download (8).jpg" alt="shoe-image" class="item-pic">
+                        <div class="item-description">
+                            <div class="cart-section d-flex justify-between">
+                                <button class="add-to-cart">Add To Cart</button>
+                                <div class="cart-increment d-flex justify-end">
+                                    <div class="cart-increment-button d-flex justify-center align-center">
+                                        <ion-icon name="add-outline"></ion-icon>
+                                    </div>
+                                </div>
+                            </div>
+                           <div class="price-item d-flex justify-center align-center">
+                            <p class="price">$75</p>
+                           </div>
+                        </div>
+                    </div>
+                    <div class="e shop-item d-flex flex-direction-col justify-center align-center">
+                        <img src="/images/download (6).jpg" alt="shoe-image" class="item-pic">
+                        <div class="item-description">
+                            <div class="cart-section d-flex justify-between">
+                                <button class="add-to-cart">Add To Cart</button>
+                                <div class="cart-increment d-flex justify-end">
+                                    <div class="cart-increment-button d-flex justify-center align-center">
+                                        <ion-icon name="add-outline"></ion-icon>
+                                    </div>
+                                </div>
+                            </div>
+                           <div class="price-item d-flex justify-center align-center">
+                            <p class="price">$75</p>
+                           </div>
+                        </div>
+                    </div>
+                    <div class=" e shop-item d-flex flex-direction-col justify-center align-center">
+                        <img src="/images/download (4).jpg" alt="shoe-image" class="item-pic">
+                        <div class="item-description">
+                            <div class="cart-section d-flex justify-between">
+                                <button class="add-to-cart">Add To Cart</button>
+                                <div class="cart-increment d-flex justify-end">
+                                    <div class="cart-increment-button d-flex justify-center align-center">
+                                        <ion-icon name="add-outline"></ion-icon>
+                                    </div>
+                                </div>
+                            </div>
+                           <div class="price-item d-flex justify-center align-center">
+                            <p class="price">$75</p>
+                           </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+       
+        <footer class="footer-section"></footer>
+    </main>
+    <script src="/script/index.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
 </html>

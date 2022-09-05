@@ -237,14 +237,3 @@ pickFile.addEventListener("click", () => {
   inputFile.classList.toggle("show-input");
   inputFile.classList.transition = "all 0.3s ease-out";
 });
-
-// Array.prototype.forEach.call(
-//   document.querySelector(".input-button"),
-//   function (button) {
-//     const hiddenInput = button.parentElement.querySelector(".input");
-//
-//     const defaultTextDisplay = "No File(s) choosen";
-//     label.textContent = defaultTextDisplay;
-//     label.title = defaultTextDisplay;
-//   }
-// );
